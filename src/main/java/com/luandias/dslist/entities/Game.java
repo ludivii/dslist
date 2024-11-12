@@ -27,7 +27,11 @@ public class Game implements Serializable {
 	private String platforms;
 	private Double score;
 	private String imgUrl;
+	
+	@Column(columnDefinition = "TEXT")
 	private String shortDescription;
+	
+	@Column(columnDefinition = "TEXT")
 	private String longDescription;
 
 	public Game() {
@@ -64,11 +68,11 @@ public class Game implements Serializable {
 		this.title = title;
 	}
 
-	public Integer getYear() {
+	public Integer getyear() {
 		return year;
 	}
 
-	public void setYear(Integer year) {
+	public void setgameyear(Integer year) {
 		this.year = year;
 	}
 
