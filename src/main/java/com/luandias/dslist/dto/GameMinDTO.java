@@ -1,6 +1,7 @@
 package com.luandias.dslist.dto;
 
 import com.luandias.dslist.entities.Game;
+import com.luandias.dslist.projections.GameMinProjection;
 
 public class GameMinDTO {
 
@@ -20,6 +21,14 @@ public class GameMinDTO {
 		year = obj.getyear();
 		imgUrl = obj.getImgUrl();
 		shortDescription = obj.getShortDescription();
+	}
+	
+	public GameMinDTO(GameMinProjection projection) {
+		id = projection.getId();
+		title = projection.getTitle();
+		year = projection.getYear();
+		imgUrl = projection.getImgUrl();
+		shortDescription = projection.getShortDescription();
 	}
 
 	public Long getId() {
